@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="html css prueba tecnica">
+    <meta name="author" content="Sara Merino Vigo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Técnica HTML | Sara Merino Vigo</title>
+
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="seccionBlanco"></div>
+        <div class="titulo">
+            <h1>¿Cuál es nuestro reto? Digitalizar la educación</h1>
+        </div>
+    </header>
+    <main>
+        <section>
+            <p>Desde el nacimiento de in/on Executive Education en <span>2018</span>, nuestra metodología ha seguido
+                evolucionando
+                día a día. Profesor tras profesor. De experiencia en experiencia.</p>
+
+            <p>No nacimos de una pandemia ni somos la adaptación forzosa de un currículo presencial a la modalidad a
+                distancia. <span>in/on es una iniciativa nativa digital</span>. Como tal, hemos construido un ecosistema
+                online
+                diseñado para que cada clic cuente.</p>
+        </section>
+        <section>
+            <div class="carousel">
+
+                <button class="flecha-izquierda" onclick="moverSlide(-1)">
+                    <img src="img/chevron-left-solid.svg" alt="anterior">
+                </button>
+
+                <div class="pista" id="pista">
+                    <div class="tarjeta">
+                        <h2>1. Networking sin barreras</h2>
+                        <hr>
+                        <p>Hemos tendido puentes sobre el Atlántico para conectar a miles de profesionales de España y
+                            Latinoamérica. Gracias a la formación in/on, pueden compartir sus experiencias y
+                            motivaciones a
+                            través sesiones en vivo y debates interactivos en un enriquecedor ambiente multicultural.
+                        </p>
+                    </div>
+                    <div class="tarjeta">
+                        <h2>2. Digitales de principio a fin</h2>
+                        <hr>
+                        <p>Le damos la bienvenida a nuestros participantes con un tour por el campus virtual y nos
+                            despedimos de ellos entregándoles un certificado emitido mediante tecnología Blockchain. La
+                            tecnología corre por nuestras venas.</p>
+                    </div>
+                    <div class="tarjeta">
+                        <h2>3. Materias actuales</h2>
+                        <hr>
+                        <p>Gracias a la inmediatez del medio digital, trasladamos las últimas tendencias en negocios al
+                            aula
+                            para formar a profesionales que, además de ser competentes en su área, sepan abordar la
+                            innovación en todos los estadios de su carrera. No ofrecemos programas típicos. Ofrecemos
+                            programas actuales con un enfoque siempre vigente.</p>
+                    </div>
+                    <div class="tarjeta">
+                        <h2>4. Flexibilidad adaptada a ti</h2>
+                        <hr>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut accusantium aliquid amet saepe
+                            recusandae delectus tempora nesciunt placeat hic consequatur, quas adipisci. Iste laborum
+                            aut reprehenderit nulla natus debitis incidunt? Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.
+                        </p>
+                    </div>
+                    <div class="tarjeta">
+                        <h2>5. Comunidad global</h2>
+                        <hr>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod fuga quis, similique dolorem
+                            voluptatum animi impedit, quisquam numquam, nobis asperiores dicta ipsam illo inventore?
+                            Deleniti optio a aliquam alias consequuntur! Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.
+                        </p>
+                    </div>
+                    <div class="tarjeta">
+                        <h2>6. Innovación a tu alcance</h2>
+                        <hr>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic ullam cum, adipisci, maxime
+                            omnis minus assumenda iusto in quo, laboriosam voluptatibus. Neque qui recusandae sequi
+                            distinctio laboriosam cupiditate. Eveniet, deleniti! Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.</p>
+                    </div>
+                </div>
+
+                <button class="flecha-derecha" onclick="moverSlide(1)">
+                    <img src="img/chevron-right-solid.svg" alt="siguiente">
+                </button>
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        const pista = document.getElementById('pista');
+        const anchoPista = pista.offsetWidth;              /* Calculamos ancho de la pista para hacer scroll horizontal del mismo ancho */
+
+        function moverSlide(direccion) {
+            pista.scrollBy({
+                left: anchoPista * direccion,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+</body>
